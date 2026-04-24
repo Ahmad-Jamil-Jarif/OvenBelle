@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #795465;
+  --color-primary-container: #f8c8dc;
+  --color-on-primary-container: #765162;
+
+  --color-secondary-container: #e6dfcf;
+  --color-on-secondary-container: #666255;
+
+  --color-tertiary: #834e68;
+  --color-tertiary-container: #ffc5de;
+  --color-on-tertiary-container: #804c65;
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+
+  --color-border: var(--border);
+  --color-outline: #817478;
+  --color-outline-variant: #d2c3c7;
+
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+
+  --shadow-ambient: 0 10px 40px -10px rgba(121, 84, 101, 0.08), 0 4px 12px -4px rgba(121, 84, 101, 0.05);
+  --shadow-ambient-hover: 0 20px 40px -10px rgba(121, 84, 101, 0.12), 0 8px 24px -8px rgba(121, 84, 101, 0.08);
+
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+:root {
+  --background: #faf9f6;
+  --surface: #faf9f6;
+  --surface-container: #efeeeb;
+  --surface-container-high: #e9e8e5;
+  --surface-container-highest: #e3e2e0;
+  --border: rgba(121, 84, 101, 0.1);
+  --text-main: #18181b;
+  --text-muted: #52525b;
+  --text-dim: #a1a1aa;
+}
+
+:root.dark {
+  --background: #111111;
+  --surface: #181818;
+  --surface-container: #222222;
+  --surface-container-high: #2a2a2a;
+  --surface-container-highest: #333333;
+  --border: rgba(255, 255, 255, 0.1);
+  --text-main: #ffffff;
+  --text-muted: #d4d4d8;
+  --text-dim: #71717a;
+
+  --color-primary: #f8c8dc;
+  --color-primary-container: #5d3d4b;
+  --color-on-primary-container: #fbcce0;
+
+  --shadow-ambient: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-main);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dark img {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.glass-panel {
+  background-color: rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgb(255 255 255 / 0.2);
+  transition: background-color 0.5s ease, border-color 0.5s ease;
+}
+
+.dark .glass-panel {
+  background-color: rgb(0 0 0 / 0.4);
+  border-color: rgb(255 255 255 / 0.1);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+.font-body {
+  font-family: var(--font-sans);
+}
